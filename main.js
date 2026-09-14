@@ -80,6 +80,7 @@ function initStickyHeader() {
    ========================================================================== */
 function initMobileNav() {
   const toggleBtn = document.querySelector('.btn-mobile-toggle');
+  const closeBtn = document.querySelector('.drawer-close-btn');
   const mainNav = document.querySelector('.main-nav');
   const dropdownTrigger = document.querySelector('.nav-item-dropdown > .nav-link');
   const dropdownItem = document.querySelector('.nav-item-dropdown');
@@ -111,6 +112,10 @@ function initMobileNav() {
         ? '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'
         : '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
     });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeMobileNav);
   }
 
   if (backdrop) {
