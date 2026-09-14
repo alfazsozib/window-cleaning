@@ -2473,6 +2473,10 @@ body.nav-open .site-header {
   z-index: 1000;
 }
 
+body.nav-open .btn-mobile-toggle {
+  display: none !important;
+}
+
 .mobile-nav-cta {
   display: none;
   width: 100%;

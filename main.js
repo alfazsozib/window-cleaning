@@ -97,9 +97,6 @@ function initMobileNav() {
     if (mainNav) mainNav.classList.remove('active');
     if (backdrop) backdrop.classList.remove('active');
     document.body.classList.remove('nav-open');
-    if (toggleBtn) {
-      toggleBtn.innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
-    }
   }
 
   if (toggleBtn && mainNav) {
@@ -108,9 +105,6 @@ function initMobileNav() {
       const isOpen = mainNav.classList.contains('active');
       if (backdrop) backdrop.classList.toggle('active', isOpen);
       document.body.classList.toggle('nav-open', isOpen);
-      toggleBtn.innerHTML = isOpen 
-        ? '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'
-        : '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
     });
   }
 
